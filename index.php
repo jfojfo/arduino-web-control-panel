@@ -27,9 +27,10 @@ $tool_map = array(
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
 
     <!-- Bootstrap -->
-<!--    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">-->
-<!--    <script src="js/jquery-1.7.1.min.js"></script>-->
-<!--    <script src="js/bootstrap-2.3.2.min.js"></script>-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/bootstrap-2.3.2.min.js"></script>
     <script>
         if (!window.jQuery) {
             console.log("load script from baidu cdn...");
@@ -61,7 +62,9 @@ $tool_map = array(
         </div>
     </div>
     <div class="container">
-        <?php include($tool_page); ?>
+        <div class="row-fluid">
+            <?php include($tool_page); ?>
+        </div>
     </div>
 <script>
     $('[data-toggle="pill"]').click(function(e){

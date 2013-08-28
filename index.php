@@ -35,6 +35,7 @@ $tool_map = array(
         if (!window.jQuery) {
             console.log("load script from baidu cdn...");
             document.write('<link href="http://libs.baidu.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen">');
+            document.write('<link href="http://libs.baidu.com/bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">');
             document.write('<script src="http://libs.baidu.com/jquery/1.10.2/jquery.js"><\/script>');
             document.write('<script src="http://libs.baidu.com/bootstrap/2.3.2/js/bootstrap.min.js"><\/script>');
         }

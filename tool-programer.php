@@ -24,8 +24,10 @@ if (isset($_POST['upload'])) {
         echo "Error: " . $upload_error_strings[$file["error"]];
     } else {
         $name = $file["name"];
+        $tmp_name = $file["tmp_name"];
+        $tmp_name = escapeshellcmd($tmp_name);
         $size = $file["size"];
-        $output = shell_exec("/opt/bin/avrdude -p m328p -c arduino -b 57600 -P /dev/ttyUSB0 -C /opt/etc/avrdude.conf -U flash:w:".trim($name) . "2>&1");
+        $output = shell_exec("/opt/bin/avrdude -p m328p -c arduino -b 115200 -P /dev/ttyUSB0 -C /opt/etc/avrdude.conf -U flash:w:".trim($tmp_name) . " 2>&1");
         $output = htmlspecialchars($output);
 ?>
         <div class='alert'>
